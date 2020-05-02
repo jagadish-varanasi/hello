@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import CommentDetail from './CommentDetail'
+import faker from 'faker'
 // identify the portion that will be duplicated and make it a sepate component
 //we cannot use { } while showing components.. always treat components as tags
 // Here App is parent component and CommentDetail is child component...props sysytem is a sysytem in react for 
@@ -10,9 +11,9 @@ import CommentDetail from './CommentDetail'
 const App=()=>{
   return (
    <div className="ui container comments">
-   <CommentDetail author="sam" />
-   <CommentDetail author="Bob"/>
-   <CommentDetail author="Alice"/>
+   <CommentDetail author="sam" timeAgo="8PM" content="Nice Blog" imagesrc={faker.image.avatar()} />
+   <CommentDetail author="Bob" timeAgo="9PM" content="It was good" imagesrc={faker.image.avatar()} />
+   <CommentDetail author="Alice" timeAgo="6AM" content="It is awesome" imagesrc={faker.image.avatar()} />
    </div>
 
 
